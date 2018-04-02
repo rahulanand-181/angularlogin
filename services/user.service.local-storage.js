@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .factory('UserService', UserService);
+        .service('UserService', UserService);
 
     UserService.$inject = ['$timeout', '$filter', '$q'];
     function UserService($timeout, $filter, $q) {
@@ -71,7 +71,7 @@
 
         function Update(user) {
             var deferred = $q.defer();
-
+            // console.log('id >>>>>>', user.id);
             var users = getUsers();
             for (var i = 0; i < users.length; i++) {
                 if (users[i].id === user.id) {

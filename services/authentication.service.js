@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .factory('AuthenticationService', AuthenticationService);
+        .service('AuthenticationService', AuthenticationService);
 
     AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'UserService'];
     function AuthenticationService($http, $cookies, $rootScope, $timeout, UserService) {
@@ -31,13 +31,6 @@
                         callback(response);
                     });
             }, 1000);
-
-            /* Use this for real authentication
-             ----------------------------------------------*/
-            //$http.post('/api/authenticate', { username: username, password: password })
-            //    .success(function (response) {
-            //        callback(response);
-            //    });
 
         }
 

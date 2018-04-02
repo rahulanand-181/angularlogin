@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .factory('FlashService', FlashService);
+        .service('FlashService', FlashService);
 
     FlashService.$inject = ['$rootScope'];
     function FlashService($rootScope) {
