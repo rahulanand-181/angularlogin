@@ -1,8 +1,9 @@
+
 ﻿(function () {
     'use strict';
 
     angular
-        .module('app')
+        .module('yoAngularApp')
         .factory('AuthenticationService', AuthenticationService);
 
     AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'UserService'];

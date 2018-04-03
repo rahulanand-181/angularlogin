@@ -1,8 +1,9 @@
-﻿(function () {
+
+(function () {
     'use strict';
 
     angular
-        .module('app', ['ngRoute', 'ngCookies'])
+        .module('yoAngularApp', ['ngRoute', 'ngCookies'])
         .config(config)
         .run(run);
 
@@ -11,19 +12,19 @@
         $routeProvider
             .when('/', {
                 controller: 'HomeController',
-                templateUrl: 'home/home.view.html',
+                templateUrl: 'views/home.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/login', {
                 controller: 'LoginController',
-                templateUrl: 'login/login.view.html',
+                templateUrl: 'views/login.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/register', {
                 controller: 'RegisterController',
-                templateUrl: 'register/register.view.html',
+                templateUrl: 'views/register.view.html',
                 controllerAs: 'vm'
             })
 
